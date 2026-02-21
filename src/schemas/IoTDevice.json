@@ -1,0 +1,14 @@
+{
+  "title": "SmartCity IoT Schema",
+  "type": "object",
+  "properties": {
+    "deviceId": { "type": "string" },
+    "deviceType": { "enum": ["environmental", "mobility", "utility", "access"] },
+    "lastPing": { "type": "string", "format": "date-time" },
+    "onChainState": {
+      "type": "string",
+      "description": "The PDA (Program Derived Address) holding the device status on Solana"
+    }
+  },
+  "required": ["deviceId", "deviceType", "onChainState"]
+}
